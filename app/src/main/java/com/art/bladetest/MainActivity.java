@@ -2,7 +2,6 @@ package com.art.bladetest;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.Button;
 
 import blade.I;
@@ -19,11 +18,6 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		ButterKnife.bind(this);
-		mTestButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				I.startTestActivity(MainActivity.this, "Hello!");
-			}
-		});
+		mTestButton.setOnClickListener(view -> I.startTestActivity(MainActivity.this, "Hello!"));
 	}
 }
